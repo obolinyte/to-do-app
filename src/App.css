@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+   /* position: relative; */
+}
+
+.background-wrapper {
+  position: relative;
+}
+
+.skewed-background-top-left {
+    width: 70px;
+    height: 900px;
+    background-color: #28252C;
+    transform: skew(-40deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.skewed-background-top-right {
+    width: 100px;
+    height: 400px;
+    background-color: #43BBFF;
+    transform: translate(0%, 0%) skew(80deg);
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.rectangle {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background-color: #28252C;
+}
+
+.rotated-rectangle {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 350px;
+    right: 120px;
+    background-color: #43BBFF;
+    transform: rotate(60deg);
+}
+
+.oval {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top: 140px;
+    left: 40px;
+    background-color: #43BBFF;
+}
+
+.app-wrapper {
+    position: absolute;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 100px;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 2;
+    color: #28252C;
+    font-family: 'Quicksand', sans-serif;
+}
+
+header {
+  text-align: center;
+  font-size: 30px;
+}
+
+header>h1 {
+  margin: 20px 0 20px 0;
+}
+
+main {
+ padding: 0 20px;
+}
+
+.new-todo {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #E4DFDE;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 26px;
+  line-height: 50px;
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+
+.new-todo:focus {
+  outline: none;
+}
+
+.new-todo::placeholder {
+  color: rgb(216, 213, 213);
+}
+
+.todo-list {
+  padding: 0;
+}
+
+.todo-list>li {
+  list-style-type: none;
+  line-height:70px;
+  font-size: 20px;
+  display:flex;
+  align-items: center;
+  /* margin-bottom: 10px; */
+  border-bottom: 1px solid rgba(67, 186, 255, 0.199);
+}
+
+.todo-list>li>.complete-checkbox {
+  appearance: none;
+  border: 1px solid #43BBFF;
+  border-radius:50%;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  margin: 0 25px 0 0;
+}
+
+.todo-list>li>.complete-checkbox:active {
+  background-color: #43BBFF;
+}
+.todo-list>li>.complete-checkbox:focus{
+  outline: none;
+}
+
+.todo-list>li>.complete-checkbox:checked {
+  /* background-color: #28252C; */
+  border: 7px solid #43BBFF;
+}
+
+.todo-list>li>.delete {
+ margin-left:auto;
+ background-color: transparent;
+ color: rgb(216, 213, 213);
+ border: none;
+ font-size:20px;
+ font-weight: 300;
+ cursor: pointer;
+ margin-right: 15px;
+ padding-top:8px;
+}
+
+.todo-list>li>.delete:hover {
+  color:#43BBFF;
+}
+
