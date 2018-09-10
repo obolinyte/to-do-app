@@ -16,7 +16,7 @@ body {
 
 .skewed-background-top-left {
     width: 70px;
-    height: 900px;
+    height: 70vw;
     background-color: #28252C;
     transform: skew(-40deg);
     position: absolute;
@@ -26,7 +26,7 @@ body {
 
 .skewed-background-top-right {
     width: 100px;
-    height: 400px;
+    height: 40vw;
     background-color: #43BBFF;
     transform: translate(0%, 0%) skew(80deg);
     position: absolute;
@@ -106,7 +106,7 @@ main {
 }
 
 .new-todo::placeholder {
-  color: rgb(216, 213, 213);
+  color: rgb(192, 189, 189);
 }
 
 .todo-list {
@@ -141,7 +141,6 @@ main {
 }
 
 .todo-list>li>.complete-checkbox:checked {
-  /* background-color: #28252C; */
   border: 7px solid #43BBFF;
 }
 
@@ -157,7 +156,35 @@ main {
  padding-top:8px;
 }
 
+.todo-list>li>.delete:focus {
+  outline:none;
+}
+
 .todo-list>li>.delete:hover {
   color:#43BBFF;
 }
+
+@media screen and (max-width: 900px) {
+  .app-wrapper {
+    width: 60%;
+    background-color:rgba(255, 255, 255, 0.9);
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  .app-wrapper {
+    width: 80%;
+  }
+  /* .skewed-background-top-left, .skewed-background-top-right {
+    display: none;
+  } */
+}
+
+@media only screen and (max-width: 700px) {
+  .app-wrapper {
+    width: 90%;
+  }
+}
+
 
