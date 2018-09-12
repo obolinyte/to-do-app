@@ -226,5 +226,8 @@ main {
   .todo-list>li>label {
     width: 60%;
   }
+  .todo-footer>li {
+    font-size: 14px;
+  }
 }
 
