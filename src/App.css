@@ -115,11 +115,11 @@ main {
 
 .todo-list>li {
   list-style-type: none;
-  line-height:70px;
+  line-height:40px;
   font-size: 20px;
   display:flex;
   align-items: center;
-  /* margin-bottom: 10px; */
+  padding: 20px 0px 20px 0px;
   border-bottom: 1px solid rgba(67, 186, 255, 0.199);
 }
 
@@ -144,6 +144,15 @@ main {
   border: 7px solid #43BBFF;
 }
 
+/* .todo-list>li>.complete-checkbox:checked + label {
+  text-decoration-line: line-through;
+
+} */
+
+.todo-list>li>label {
+  width: 80%;
+}
+
 .todo-list>li>.delete {
  margin-left:auto;
  background-color: transparent;
@@ -161,6 +170,29 @@ main {
 }
 
 .todo-list>li>.delete:hover {
+  color:#43BBFF;
+}
+
+.todo-footer {
+  display:flex;
+  flex-direction: row;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.todo-footer>li {
+  list-style-type: none;
+  margin-right: 20px;
+  color: rgb(192, 189, 189);
+}
+
+.todo-footer>.delete-completed{
+  margin-left:auto;
+  margin-right:0;
+  cursor: pointer;
+}
+
+.todo-footer>.delete-completed:hover {
   color:#43BBFF;
 }
 
@@ -187,4 +219,12 @@ main {
   }
 }
 
+@media only screen and (max-width: 400px) {
+  .app-wrapper {
+    width: 95%;
+  }
+  .todo-list>li>label {
+    width: 60%;
+  }
+}
 

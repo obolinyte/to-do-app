@@ -17,11 +17,15 @@ class ListItem extends Component {
     }
 
     render() {
+        let strikethrough = {
+            textDecoration: "line-through"
+        }
+        let styles = this.props.checked ? strikethrough : {}
         return (
                     <li>
                     <input checked={this.props.checked} onChange={this.checkItem} 
                     className="complete-checkbox" type="checkbox" name="" value="" />
-                    <label className="todo-list-item">{this.props.label}</label>
+                    <label className="todo-list-item" style={styles}>{this.props.label}</label>
                     <button className="delete icon-trash-o" onClick={this.deleteItem}></button>
                     </li>
         );
